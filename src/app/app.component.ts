@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Tour of Heroes';
+  constructor() {
+    console.log("if i see this, AppComponent is a constructor, not a plain object.");
+  }
 }

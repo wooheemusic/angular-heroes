@@ -10,5 +10,30 @@
 </head>
 <body>
   <app-root></app-root>
+  <script>
+
+ // test1 : looking for a custom element of app.component
+setTimeout(()=>{
+    //console.log(test1 instanceof AppComponent);  //  cannot see AppComponent...
+    console.log(Object.getPrototypeOf(test1).constructor.name); // HTMLHeadingElement
+    const appRoot = document.getElementsByTagName("app-root")[0];
+    console.dir(appRoot);
+    console.log(Object.getPrototypeOf(appRoot).constructor.name); //HTMLElement
+  }, 1000);
+//result : i guess angular2 does not use 'customElements.define(f)'...
+
+// test2 : the same as test1 but for heros.component
+setTimeout(()=>{
+    //console.log(test1 instanceof AppComponent);  //  cannot see AppComponent...
+    const appHeroes = document.getElementsByTagName("app-heroes")[0];
+    console.dir(appHeroes);
+    console.log(Object.getPrototypeOf(appHeroes).constructor.name); //HTMLElement
+  }, 1000);
+  //result : the same as test1
+
+
+
+
+  </script>
 </body>
 </html>
