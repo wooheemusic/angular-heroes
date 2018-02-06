@@ -12,9 +12,9 @@ console.log("AppModule : ", AppModule);
 
 const bootstrapPromise = platformBrowserDynamic().bootstrapModule(AppModule);
 
-console.log("promise 'platformBrowserDynamic().bootstrapModule(AppModule)' : ", bootstrapPromise);
+console.log("main 'platformBrowserDynamic().bootstrapModule(AppModule)' : ", bootstrapPromise);
 
 bootstrapPromise.then((...data) => {
-    console.log("promise.then after 'platformBrowserDynamic().bootstrapModule(AppModule)' : ", data);
+    console.log("main after 'platformBrowserDynamic().bootstrapModule(AppModule).then args' : ", data);
   })
   .catch(err => console.log(err));

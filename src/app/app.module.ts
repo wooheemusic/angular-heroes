@@ -22,12 +22,12 @@ import { MessageService } from './message.service'
     BrowserModule,
     FormsModule
   ],
-  providers: [ HeroService, MessageService],
+  providers: [ MessageService, HeroService], // how Angular determines the dependency between two services ????????
   bootstrap: [AppComponent]
 })
 export class AppModule {
     constructor() {
-      console.log("AppModule constructed.");
+      console.log("AppModule constructor");
     }
 
  }

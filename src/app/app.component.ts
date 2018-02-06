@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Tour of Heroes';
   constructor() {
-    //console.log("if i see this, AppComponent is a constructor, not a plain object.");
+    console.log("AppComponent constructor");
   }
 }
