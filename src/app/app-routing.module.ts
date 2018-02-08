@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 // import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule as yyy, Routes } from '@angular/router';
 
 import { HeroesComponent } from './heroes/heroes.component';
 
@@ -16,6 +16,9 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 //   declarations: []
 // })
 
+console.log(yyy);
+console.log(yyy.forRoot);
+
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'heroes', component: HeroesComponent },
@@ -24,13 +27,13 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [yyy.forRoot(routes)],
+  exports: [yyy]
 })
 
-export class AppRoutingModule {
-  constructor(){
+export class AppRoutingModuleX {
+  constructor() {
     console.log("AppRoutingModule constructor");
   }
 
- }
+}
